@@ -1,6 +1,7 @@
 import java.io.*;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 
@@ -15,7 +16,9 @@ public class Library
         String firstName;
         CheckedOut checkedOut;
         LocalDate localDate = LocalDate.now(ZoneId.systemDefault());
+        localDate = localDate.plus(14, ChronoUnit.DAYS);
         String enume;
+
 
         Scanner scan = new Scanner(System.in);
         //int keepGoing;
@@ -49,8 +52,9 @@ public class Library
         {
             checkedOut = CheckedOut.NO;
         }
+
             libraryItem it = new libraryItem(lastName, firstName, title, checkedOut, localDate);
         System.out.println("Your new book is: " + it);
-
+        BooksFile.writeToFile(it, books);
     }
 }
