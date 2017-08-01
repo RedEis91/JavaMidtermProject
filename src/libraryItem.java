@@ -25,12 +25,12 @@ public class libraryItem
         return dueDate;
     }
 
-    public void setDueDate(LocalDate dueDate)
+    public LocalDate setDueDate(LocalDate dueDate)
     {
         LocalDate currentDate = LocalDate.now(ZoneId.systemDefault());
         LocalDate returnDate = currentDate.plus(14, ChronoUnit.DAYS);
         dueDate = returnDate;
-
+        return dueDate;
     }
 
     public String getTitle() {
@@ -70,6 +70,6 @@ public class libraryItem
     @Override
     public String toString()
     {
-        return authorLastName + " " + authorFirstName + " " + title + " Checked Out: " + checkedOut + " Due Date: ";
+        return authorLastName + " " + authorFirstName + " " + title + " Checked Out: " + checkedOut + " Due Date: " + dueDate;
     }
 }

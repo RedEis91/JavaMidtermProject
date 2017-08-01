@@ -1,4 +1,6 @@
 import java.io.*;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.*;
 public class BooksFile {
     File books = new File("books.txt");
@@ -38,12 +40,12 @@ public class BooksFile {
                 //create a new String array by splitting line into tokens, seperated by tabs
                 String[] tokens = line.split("\t");
 
-                if (tokens.length < 4) {
-                    System.out.println("Bad line format --halting read");
-                    System.out.println(tokens.length + " is the length of your libraryItem");
-                    //breaks out of loop but will still return carsList
-                    break;
-                }
+//                if (tokens.length < 5) {
+//                    System.out.println("Bad line format --halting read");
+//                    System.out.println(tokens.length + " is the length of your libraryItem");
+//                    //breaks out of loop but will still return carsList
+//                    break;
+//                }
 
                 //instantiates new CheckedOut enum
                 CheckedOut c;
@@ -54,7 +56,8 @@ public class BooksFile {
                     //otherwise, CheckedOut.NO
                 } else {c= CheckedOut.NO;}
 
-                libraryItem item = new libraryItem(tokens[0], tokens[1], tokens[2], c);
+                LocalDate date = LocalDate.now(ZoneId.systemDefault());
+                libraryItem item = new libraryItem(tokens[0], tokens[1], tokens[2], c,date);
 
                 booksList.add(item);
 //                output = output + line + "/n";

@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.*;
 import java.io.*;
 public class Catalog
@@ -7,9 +8,9 @@ public class Catalog
 
 
     //method to add libraryItem to List
-    public void addLibraryItem(String authorLastName, String authorFirstName, String bookTitle, CheckedOut check)
+    public void addLibraryItem(String authorLastName, String authorFirstName, String bookTitle, CheckedOut check, LocalDate date)
     {
-        libraryItem a = new libraryItem(authorLastName, authorFirstName, bookTitle, check);
+        libraryItem a = new libraryItem(authorLastName, authorFirstName, bookTitle, check, date);
         list.add(a);
     }
 
