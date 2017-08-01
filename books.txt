@@ -1,3 +1,4 @@
-Meyer Stephenie Twilight
-Brown Marc Arthur
-Paolini Christopher Eragon
+Meyer	Stephenie	Twilight
+Brown	Marc	Arthur
+Paolini	Christopher	Eragon
+Rowling	J.K.	Harry Potter

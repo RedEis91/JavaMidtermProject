@@ -35,8 +35,8 @@ public class BooksFile {
 //            int parser = 0;
             while(line != null)
             {
-                //create a new String array by splitting line into tokens, seperated by spaces
-                String[] tokens = line.split(" ");
+                //create a new String array by splitting line into tokens, seperated by tabs
+                String[] tokens = line.split("\t");
 
                 libraryItem item = new libraryItem(tokens[0], tokens[1], tokens[2]);
 

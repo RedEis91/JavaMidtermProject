@@ -4,7 +4,7 @@
 public enum CheckedOut { YES, NO;
 
     @Override
-    public String ttoString() {
+    public String toString() {
         return "CheckedOut{}";
     }
 }
