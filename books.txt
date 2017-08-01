@@ -1,4 +1,4 @@
-Meyer	Stephenie	Twilight
-Brown	Marc	Arthur
-Paolini	Christopher	Eragon
-Rowling	J.K.	Harry Potter
+Meyer	Stephenie	Twilight	no
+Brown	Marc	Arthur	yes
+Paolini	Christopher	Eragon	no
+Rowling	J.K.	Harry Potter	yes

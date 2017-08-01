@@ -5,7 +5,7 @@ import java.util.*;
 public class Library
 {
     public static void main(String[] args) {
-        System.out.println("Did it work?");
+
         Scanner scan = new Scanner(System.in);
         //int keepGoing;
         BooksFile booksFile = new BooksFile();

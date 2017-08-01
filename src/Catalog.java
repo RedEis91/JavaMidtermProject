@@ -7,9 +7,9 @@ public class Catalog
 
 
     //method to add libraryItem to List
-    public void addLibraryItem(String authorLastName, String authorFirstName, String bookTitle)
+    public void addLibraryItem(String authorLastName, String authorFirstName, String bookTitle, CheckedOut check)
     {
-        libraryItem a = new libraryItem(authorLastName, authorFirstName, bookTitle);
+        libraryItem a = new libraryItem(authorLastName, authorFirstName, bookTitle, check);
         list.add(a);
     }
 
