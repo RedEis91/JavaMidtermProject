@@ -1,4 +1,3 @@
-
 public class libraryItem
 {
     private String title;

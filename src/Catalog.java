@@ -2,9 +2,8 @@ import java.util.*;
 import java.io.*;
 public class Catalog
 {
-    //constructor for libraryItem list
+    //constructor for libraryItem list // catalog
     ArrayList<libraryItem> list = new ArrayList<libraryItem>();
-
 
 
     //method to add libraryItem to List
@@ -15,45 +14,4 @@ public class Catalog
     }
 
 
-    public static void writeToFile(Object input)
-    {
-        File books = new File("books.txt");
-        try {
-            PrintWriter p = new PrintWriter(new FileOutputStream(books, true));
-
-            p.println(input);
-            p.close();
-        } catch (IOException e)
-        {
-            System.out.println("File not found!");
-            e.printStackTrace();
-            System.out.println(e);
-        }
-    }
-
-    public static String readFromFile()
-    {
-        File books = new File("books.txt");
-        String output = " ";
-        try {
-            FileReader reader = new FileReader(books);
-
-            BufferedReader bufReader = new BufferedReader(reader);
-
-            String line = bufReader.readLine();
-
-            while(line != null)
-            {
-                output = output + line + "/n";
-                line = bufReader.readLine();
-            }
-            bufReader.close();
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-            System.out.println("File not found!");
-        }
-        return output;
-    }
 }
