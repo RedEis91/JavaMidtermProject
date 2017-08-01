@@ -1,12 +1,3 @@
-Meyer    Stephenie   Twilight
-Collins  Suzanne The Hunger Games
-Rowling  J.K.    Harry Potter
-Brown   Dan The Da Vinci Code
-Shakespeare William Romeo and Juliet
-Stoker  Bram    Dracula
-Seuss   Dr  Green Eggs and Ham
-Dickens Charles A Tale of Two Cities
-Picoult Jodi    My Sister's Keeper
-McCarthy    Cormac  The Road
-Twain   Mark    The Adventures of Tom Sawyer
-King Stephen    The Shining
+Meyer Stephenie Twilight
+Brown Marc Arthur
+Paolini Christopher Eragon

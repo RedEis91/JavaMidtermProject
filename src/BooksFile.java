@@ -20,23 +20,30 @@ public class BooksFile {
         }
     }
 
-    public static ArrayList<String> readFromFile(File books)
+    public static ArrayList<libraryItem> readFromFile(File books)
     {
-        ArrayList<String> booksList = new ArrayList<String>();
+        ArrayList<libraryItem> booksList = new ArrayList<libraryItem>();
 //        String output = " ";
         try {
+            //takes in file input stream
             FileReader reader = new FileReader(books);
-
+            //filters that stream down further
             BufferedReader bufReader = new BufferedReader(reader);
-
+            //line is stored as string
             String line = bufReader.readLine();
-
+            //as long as line exists
+//            int parser = 0;
             while(line != null)
             {
+                //create a new String array by splitting line into tokens, seperated by spaces
+                String[] tokens = line.split(" ");
 
-                booksList.add(line);
+                libraryItem item = new libraryItem(tokens[0], tokens[1], tokens[2]);
+
+                booksList.add(item);
 //                output = output + line + "/n";
                 line = bufReader.readLine();
+//                parser++;
             }
             bufReader.close();
         }

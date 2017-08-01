@@ -1,14 +1,16 @@
 public class libraryItem
 {
-    private String title;
+
     private String authorLastName;
     private String authorFirstName;
+    private String title;
 
-    public libraryItem(String title, String lastName, String firstName)
+    public libraryItem( String lastName, String firstName, String title)
     {
-        this.title = title;
+
         authorLastName = lastName;
         authorFirstName = firstName;
+        this.title = title;
     }
 
     public String getTitle() {
