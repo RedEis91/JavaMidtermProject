@@ -4,17 +4,27 @@ public class libraryItem
     private String authorLastName;
     private String authorFirstName;
     private String title;
+    private CheckedOut checkedOut;
 
-    public libraryItem( String lastName, String firstName, String title)
+    public libraryItem( String lastName, String firstName, String title, CheckedOut checkedOut)
     {
 
         authorLastName = lastName;
         authorFirstName = firstName;
         this.title = title;
+        this.checkedOut = checkedOut;
     }
 
     public String getTitle() {
         return title;
+    }
+
+    public CheckedOut getCheckedOut() {
+        return checkedOut;
+    }
+
+    public void setCheckedOut(CheckedOut checkedOut) {
+        this.checkedOut = checkedOut;
     }
 
     public void setTitle(String title) {

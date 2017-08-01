@@ -32,13 +32,29 @@ public class BooksFile {
             //line is stored as string
             String line = bufReader.readLine();
             //as long as line exists
-//            int parser = 0;
+//
             while(line != null)
             {
                 //create a new String array by splitting line into tokens, seperated by tabs
                 String[] tokens = line.split("\t");
 
-                libraryItem item = new libraryItem(tokens[0], tokens[1], tokens[2]);
+                if (tokens.length < 4) {
+                    System.out.println("Bad line format --halting read");
+                    System.out.println(tokens.length + " is the length of your libraryItem");
+                    //breaks out of loop but will still return carsList
+                    break;
+                }
+
+                //instantiates new CheckedOut enum
+                CheckedOut c;
+                //conditional logic to check if CheckedOut is "YES" (contains the letter Y, ignoring case)
+                if (tokens[3].contains("y") || tokens[3].contains("Y")) {
+                    //if yes, CheckedOut.YES
+                c = CheckedOut.YES;
+                    //otherwise, CheckedOut.NO
+                } else {c= CheckedOut.NO;}
+
+                libraryItem item = new libraryItem(tokens[0], tokens[1], tokens[2], c);
 
                 booksList.add(item);
 //                output = output + line + "/n";
