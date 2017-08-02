@@ -84,6 +84,19 @@ public class Catalog
         return  onShelf;
     }
 
+    public static ArrayList<libraryItem> displayCheckedOut(ArrayList<libraryItem> list) {
+        ArrayList<libraryItem> checkedOut = new ArrayList<>();
+
+        for (libraryItem item: list) {
+            if (item.getCheckedOut() == CheckedOut.YES) {
+                checkedOut.add(item);
+
+            }
+        }
+        return  checkedOut;
+    }
+
+
 
 
 }

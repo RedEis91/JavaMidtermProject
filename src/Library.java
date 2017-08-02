@@ -19,10 +19,15 @@ public class Library
 
 
         ArrayList<libraryItem> onShelf = Catalog.displayOnShelf(list);
-
+        ArrayList<libraryItem> checkedOut = Catalog.displayCheckedOut(list);
 
         System.out.println("Books on shelf " + onShelf.size());
         for (libraryItem item: onShelf) {
+            System.out.println(item);
+        }
+
+        System.out.println("Books checked out " + checkedOut.size());
+        for (libraryItem item: checkedOut) {
             System.out.println(item);
         }
 
