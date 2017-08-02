@@ -1,3 +1,3 @@
-Rowling JK Harry Potter	NO	2017-08-16
+Rowling	JK	Harry Potter	NO	2017-08-16
 Eisenhauer	Jared	Book	NO	2017-08-16
 Eisenhauer	Jared	Book2	YES	2017-08-16

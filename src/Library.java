@@ -9,12 +9,23 @@ public class Library
 {
     public static void main(String[] args)
     {
-        BooksFile booksFile = new BooksFile();
-        File books = booksFile.books;
+        Catalog booksFile = new Catalog();
+        File books = new File("books.txt");
+
+        ArrayList<libraryItem> booksList = new ArrayList<libraryItem>();
 
 
+       ArrayList<libraryItem> list = Catalog.readFromFile(books, booksList);
 
-        ArrayList<libraryItem> list = Catalog.readFromFile(books);
+
+        ArrayList<libraryItem> onShelf = Catalog.displayOnShelf(list);
+
+
+        System.out.println("Books on shelf " + onShelf.size());
+        for (libraryItem item: onShelf) {
+            System.out.println(item);
+        }
+
 //        String lastName;
 //        String title;
 //        String firstName;
