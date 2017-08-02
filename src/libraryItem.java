@@ -41,8 +41,20 @@ public class libraryItem
         return checkedOut;
     }
 
-    public void setCheckedOut(CheckedOut checkedOut) {
+    public CheckedOut setCheckedOut() {
         this.checkedOut = checkedOut;
+        return this.checkedOut;
+    }
+
+    public void placeOnShelf(String retu) {
+        if (retu.contains("y") || retu.contains("Y")) {
+
+        checkedOut = CheckedOut.NO;
+        }
+        else {
+            System.out.println("I don't know wtf I'm doing");
+        }
+
     }
 
     public void setTitle(String title) {

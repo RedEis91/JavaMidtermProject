@@ -54,15 +54,14 @@ public class Catalog
         }
         return a;
     }
-
-
-    public static void writeToFile(Object input, File books)
+    public static void writeToFile(ArrayList<libraryItem> input, File books)
     {
         try {
 
-            PrintWriter p = new PrintWriter(new FileOutputStream(books, true));
+            PrintWriter p = new PrintWriter(new FileOutputStream(books, false));
+            for (libraryItem item: input){
+            p.println(item);}
 
-            p.println(input);
             p.close();
         } catch (IOException e)
         {
@@ -71,6 +70,8 @@ public class Catalog
             System.out.println(e);
         }
     }
+
+
 
     public static ArrayList<libraryItem> displayOnShelf(ArrayList<libraryItem> list) {
         ArrayList<libraryItem> onShelf = new ArrayList<>();

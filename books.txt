@@ -1,3 +1,2 @@
-Rowling	JK	Harry Potter	NO	2017-08-16
-Eisenhauer	Jared	Book	NO	2017-08-16
-Eisenhauer	Jared	Book2	YES	2017-08-16
+LAST	FIRST	BOOK	NO	2017-08-02
+LAST1	FIRST1	BOOK1	YES	2017-08-02
