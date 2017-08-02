@@ -25,11 +25,13 @@ public class Library
         System.out.println("1) VIEW ALL BOOKS");
         System.out.println("2) VIEW BOOKS IN STOCK");
         System.out.println("3) VIEW CHECKED OUT BOOKS");
+        System.out.println("4) SELECT A BOOK");
         selection = scan.nextInt();
 
             if (selection == 1) {
-                for (libraryItem libraryitem: list) {
-                    System.out.println(libraryitem);
+                for (int i = 1; i <= list.size(); i++ ) {
+                    System.out.print(i + ": ");
+                    System.out.println(list.get(i-1));
                 }
             }
                     else if
@@ -41,8 +43,14 @@ public class Library
                 for (libraryItem libraryitem: checkedOut) {
                     System.out.println(libraryitem);
                 } }
-                else {
-                    System.out.println("1 2 or 3 please");
+                else if (selection == 4) {
+                for (int i = 1; i <= list.size(); i++ ) {
+                    System.out.print(i + ": ");
+                    System.out.println(list.get(i-1));
+                }
+                    int sel = scan.nextInt();
+                    libraryItem l = list.get((sel-1));
+                System.out.println(l);
             }
 
 
