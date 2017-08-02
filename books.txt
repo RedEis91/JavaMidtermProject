@@ -1,4 +1,3 @@
-Meyer	Stephenie	Twilight	no
-Brown	Marc	Arthur	yes
-Paolini	Christopher	Eragon	no
-Rowling	J.K.	Harry Potter	yesEisenhauer Jared MY DAMN BOOK Checked Out: NO Due Date: 2017-08-15
+Rowling JK Harry Potter	NO	2017-08-16
+Eisenhauer	Jared	Book	NO	2017-08-16
+Eisenhauer	Jared	Book2	YES	2017-08-16

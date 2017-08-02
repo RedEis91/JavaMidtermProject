@@ -24,8 +24,8 @@ public class Library
         //int keepGoing;
         BooksFile booksFile = new BooksFile();
         File books = booksFile.books;
-        ArrayList<libraryItem> testList = booksFile.readFromFile(books);
-        int i = 1;
+//        ArrayList<libraryItem> testList = booksFile.readFromFile(books);
+//        int i = 1;
 //        for (libraryItem book: testList) {
 //
 //            System.out.println(""+ i+ ": " + book);

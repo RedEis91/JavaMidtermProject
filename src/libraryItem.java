@@ -70,6 +70,6 @@ public class libraryItem
     @Override
     public String toString()
     {
-        return authorLastName + " " + authorFirstName + " " + title + " Checked Out: " + checkedOut + " Due Date: " + dueDate;
+        return authorLastName + "\t" + authorFirstName + "\t" + title  + "\t" + checkedOut + "\t" + dueDate;
     }
 }

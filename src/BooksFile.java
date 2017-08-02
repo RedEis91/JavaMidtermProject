@@ -10,6 +10,7 @@ public class BooksFile {
     public static void writeToFile(Object input, File books)
     {
         try {
+
             PrintWriter p = new PrintWriter(new FileOutputStream(books, true));
 
             p.println(input);
@@ -55,7 +56,6 @@ public class BooksFile {
                 c = CheckedOut.YES;
                     //otherwise, CheckedOut.NO
                 } else {c= CheckedOut.NO;}
-
                 LocalDate date = LocalDate.now(ZoneId.systemDefault());
                 libraryItem item = new libraryItem(tokens[0], tokens[1], tokens[2], c,date);
 
