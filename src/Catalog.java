@@ -23,8 +23,6 @@ public class Catalog
 
                 //making sure there are 5 tokens (the 5 parameters of
                   if (tokens.length < 5) {
-                    System.out.println("Bad line format --halting read");
-                    System.out.println(tokens.length + " is the length of your libraryItem");
                     //breaks out of loop but will still return carsList
                     break;
                 }

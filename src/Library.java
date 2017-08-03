@@ -19,6 +19,7 @@ public class Library {
         ArrayList<libraryItem> checkedOut = Catalog.displayCheckedOut(list);
         System.out.println("WELCOME TO THE LIBRARY!");
         do {
+
             System.out.println();
             System.out.println("1) VIEW ALL BOOKS");
             System.out.println("2) VIEW BOOKS IN STOCK");
@@ -57,7 +58,7 @@ public class Library {
                 l.setDueDate();
                 onShelf.remove(l);
 
-                System.out.println();
+
                 System.out.println("That's due back in 2 weeks, kid. Don't play with my books, ok?");
             } else if (selection == 5) {
                 int sel;
@@ -71,9 +72,19 @@ public class Library {
                 l.resetDueDate();
                 checkedOut.remove(l);
                 System.out.println("Thanks for returning your book!");
-                Catalog.writeToFile(list, books);
+
+                onShelf.add(l);
+            } else if (selection == 6) {
+                break;
             }
+
+            else {
+                System.out.println("ERROR. ENTER 1-6.");
+            }
+//            Catalog.writeToFile(list, books);
         } while (selection != 6);
+
         System.out.println("Peace!");
+
     }
 }
