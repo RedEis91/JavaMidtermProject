@@ -57,7 +57,7 @@ public class Library {
                 l.setDueDate();
                 onShelf.remove(l);
 
-
+                System.out.println();
                 System.out.println("That's due back in 2 weeks, kid. Don't play with my books, ok?");
             } else if (selection == 5) {
                 int sel;
