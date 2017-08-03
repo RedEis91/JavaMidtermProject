@@ -1,8 +1,10 @@
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
-
+import java.*;
+import java.time.format.DateTimeFormatter;
 public class libraryItem
+
 {
 
     private String authorLastName;
@@ -85,6 +87,10 @@ public class libraryItem
     @Override
     public String toString()
     {
-        return authorLastName + "\t" + authorFirstName + "\t" + title  + "\t" + checkedOut + "\t" + dueDate;
+
+        String results = " ";
+    System.out.printf("%-14s %-13s %-42s %-13s",authorLastName ,authorFirstName ,title ,checkedOut);
+
+        return results;
     }
 }
