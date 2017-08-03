@@ -25,13 +25,17 @@ public class libraryItem
         return dueDate;
     }
 
-    public LocalDate setDueDate(LocalDate dueDate)
-    {
+    public void setDueDate() {
         LocalDate currentDate = LocalDate.now(ZoneId.systemDefault());
         LocalDate returnDate = currentDate.plus(14, ChronoUnit.DAYS);
         dueDate = returnDate;
-        return dueDate;
     }
+
+    public void resetDueDate() {
+        LocalDate currentDate = LocalDate.now(ZoneId.systemDefault());
+        dueDate = currentDate;
+    }
+
 
     public String getTitle() {
         return title;
@@ -41,21 +45,20 @@ public class libraryItem
         return checkedOut;
     }
 
-    public CheckedOut setCheckedOut() {
-        this.checkedOut = checkedOut;
-        return this.checkedOut;
-    }
+//    public CheckedOut setCheckedOut() {
+//        this.checkedOut = checkedOut;
+//        return this.checkedOut;
+//    }
 
-    public void placeOnShelf(String retu) {
-        if (retu.contains("y") || retu.contains("Y")) {
-
+    public void placeOnShelf() {
         checkedOut = CheckedOut.NO;
-        }
-        else {
-            System.out.println("I don't know wtf I'm doing");
-        }
-
     }
+
+    public void checkOut() {
+        checkedOut = CheckedOut.YES;
+    }
+
+
 
     public void setTitle(String title) {
         this.title = title;

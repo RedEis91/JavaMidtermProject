@@ -15,14 +15,13 @@ public class Catalog
             BufferedReader bufReader = new BufferedReader(reader);
             //line is stored as string
             String line = bufReader.readLine();
-            //as long as line exists
-//
+            //as long as the next line exists
             while(line != null)
             {
                 //create a new String array by splitting line into tokens, separated by tabs
                 String[] tokens = line.split("\t");
 
-                //making sure there are 5 tokens
+                //making sure there are 5 tokens (the 5 parameters of
                   if (tokens.length < 5) {
                     System.out.println("Bad line format --halting read");
                     System.out.println(tokens.length + " is the length of your libraryItem");

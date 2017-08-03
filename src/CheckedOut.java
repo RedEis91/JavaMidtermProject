@@ -6,9 +6,9 @@ public enum CheckedOut { YES, NO;
         switch(this)
         {
             case YES:
-                return "YES";
+                return "Checked Out";
             case NO:
-                return "NO";
+                return "On Shelf";
             default:
                 return "Check with your librarian";
         }
