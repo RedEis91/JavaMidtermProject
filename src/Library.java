@@ -72,14 +72,8 @@ public class Library {
                 checkedOut.remove(l);
                 System.out.println("Thanks for returning your book!");
                 Catalog.writeToFile(list, books);
-
             }
-
-
         } while (selection != 6);
         System.out.println("Peace!");
-
     }
-
-
 }
