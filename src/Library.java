@@ -56,7 +56,7 @@ public class Library {
                 l.checkOut();
                 l.setDueDate();
                 onShelf.remove(l);
-                Catalog.writeToFile(list, books);
+
 
                 System.out.println("That's due back in 2 weeks, kid. Don't play with my books, ok?");
             } else if (selection == 5) {
